@@ -1,13 +1,14 @@
-import {atom, PrimitiveAtom} from "jotai";
+import { atom, PrimitiveAtom } from "jotai";
 
-import {mocks} from "@/mocks";
+import { mocks } from "@/mocks";
 
-import {Doctor} from "@/entities/doctor";
-import {Illness} from "@/entities/illness";
+import { Doctor } from "@/entities/doctor";
+import { Illness } from "@/entities/illness";
 
+export const doctorsStorage: PrimitiveAtom<Array<Doctor>> = atom(
+  mocks.getDoctors(),
+); // TODO Убрать моки
 
-export const doctorsStorage: PrimitiveAtom<Array<Doctor>> = atom(mocks.getDoctors()); // TODO Убрать моки
-
-export const doctors: Array<Illness> = atom((get, set) => {
-    get(doctorsStorage);
+export const doctors: Array<Illness> = atom((get) => {
+  get(doctorsStorage); // Должен быть readonly
 });

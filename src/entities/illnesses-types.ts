@@ -50,7 +50,7 @@ export type IllnessTypeRu =
   | "Краснуха"
   | "Ветряная оспа";
 
-  export type IllnessTypeEn =
+export type IllnessTypeEn =
   | "flu"
   | "cold"
   | "pneumonia"
@@ -102,4 +102,4 @@ export type IllnessTypeRu =
   | "rubella"
   | "chickenpox";
 
-  export type IllnessType = IllnessTypeRu | IllnessTypeEn;
+export type IllnessType = IllnessTypeRu | IllnessTypeEn;

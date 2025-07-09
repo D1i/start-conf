@@ -1,8 +1,8 @@
-import { Doctor } from '../entities/doctor';
-import { Illness } from '../entities/illness';
-import {pickRandom} from '../utils';
-import {generateMockIllnessList} from './mock-illnesses'
-import { v4 as uuid } from 'uuid';
+import { Doctor } from "../entities/doctor";
+import { Illness } from "../entities/illness";
+import { pickRandom } from "../utils";
+import { generateMockIllnessList } from "./mock-illnesses";
+import { v4 as uuid } from "uuid";
 
 export const doctorsMock: Doctor[] = [
   new Doctor({
@@ -10,11 +10,15 @@ export const doctorsMock: Doctor[] = [
     lastName: "Smirnova",
     stage: 12,
     id: uuid(),
-    selfInfo: "Therapist with over 10 years of experience in internal medicine.",
+    selfInfo:
+      "Therapist with over 10 years of experience in internal medicine.",
     illnesses: [
       new Illness("flu", "Influenza virus treatment and prevention."),
-      new Illness("pneumonia", "Treats bacterial and viral pneumonia effectively."),
-    ]
+      new Illness(
+        "pneumonia",
+        "Treats bacterial and viral pneumonia effectively.",
+      ),
+    ],
   }),
 
   new Doctor({
@@ -24,9 +28,12 @@ export const doctorsMock: Doctor[] = [
     id: uuid(),
     selfInfo: "Specialist in chronic diseases and metabolic disorders.",
     illnesses: [
-      new Illness("diabetes", "Focused on managing type 1 and type 2 diabetes."),
+      new Illness(
+        "diabetes",
+        "Focused on managing type 1 and type 2 diabetes.",
+      ),
       new Illness("arthritis", "Helps reduce inflammation and joint pain."),
-    ]
+    ],
   }),
 
   new Doctor({
@@ -36,18 +43,42 @@ export const doctorsMock: Doctor[] = [
     id: uuid(),
     selfInfo: "Expert in neurology and pain management.",
     illnesses: [
-      new Illness("migraine", "Treats migraine through neurological evaluation."),
-      new Illness("eczema", "Experience in dermatological autoimmune conditions."),
-    ]
+      new Illness(
+        "migraine",
+        "Treats migraine through neurological evaluation.",
+      ),
+      new Illness(
+        "eczema",
+        "Experience in dermatological autoimmune conditions.",
+      ),
+    ],
   }),
 ];
 
 export const firstNamesMock: Array<string> = [
-  "Elena", "Ivan", "Maria", "Oleg", "Anna", "Sergey", "Natalia", "Dmitry", "Olga", "Andrey"
+  "Elena",
+  "Ivan",
+  "Maria",
+  "Oleg",
+  "Anna",
+  "Sergey",
+  "Natalia",
+  "Dmitry",
+  "Olga",
+  "Andrey",
 ];
 
 const lastNamesMock: Array<string> = [
-  "Smirnova", "Ivanov", "Kuznetsova", "Petrov", "Sokolova", "Volkov", "Fedorova", "Popov", "Lebedev", "Morozov"
+  "Smirnova",
+  "Ivanov",
+  "Kuznetsova",
+  "Petrov",
+  "Sokolova",
+  "Volkov",
+  "Fedorova",
+  "Popov",
+  "Lebedev",
+  "Morozov",
 ];
 
 export const selfInfosMock: Array<string> = [
@@ -80,14 +111,14 @@ export function generateMockDoctor(): Doctor {
     stage: stage,
     id: uuid(),
     selfInfo: selfInfo,
-    illnesses: generateMockIllnessList(Math.floor(Math.random() * 10))
-  })
+    illnesses: generateMockIllnessList(Math.floor(Math.random() * 10)),
+  });
 }
 
-export function generateMockDoctorsList(count = 6):Array<Doctor> {
-    const result: Doctor[] = [];
-    for (let i = 0; i < count; i++) {
-        result.push(generateMockDoctor());
-    }
-    return result;
+export function generateMockDoctorsList(count = 6): Array<Doctor> {
+  const result: Doctor[] = [];
+  for (let i = 0; i < count; i++) {
+    result.push(generateMockDoctor());
+  }
+  return result;
 }

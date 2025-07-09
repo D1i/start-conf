@@ -1,9 +1,9 @@
-import {generateMockIllnessList} from "./mock-illnesses";
-import {generateMockDoctorsList} from "./mock-doctors";
-import {generateMockOrgansList} from './mock-organs';
+import { generateMockIllnessList } from "./mock-illnesses";
+import { generateMockDoctorsList } from "./mock-doctors";
+import { generateMockOrgansList } from "./mock-organs";
 
 export const mocks = {
-    getIllnesses: generateMockIllnessList,
-    getDoctors: generateMockDoctorsList,
-    getOrgans: generateMockOrgansList
+  getIllnesses: generateMockIllnessList,
+  getDoctors: generateMockDoctorsList,
+  getOrgans: generateMockOrgansList,
 };
