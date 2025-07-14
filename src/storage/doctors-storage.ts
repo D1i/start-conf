@@ -1,14 +1,18 @@
-import { atom, PrimitiveAtom } from "jotai";
+'use client';
 
-import { mocks } from "@/mocks";
+import { atom, PrimitiveAtom } from 'jotai';
 
-import { Doctor } from "@/entities/doctor";
-import { Illness } from "@/entities/illness";
+import { mocks } from '@/mocks';
+
+import { Doctor } from '@/entities/doctor';
+import { Illness } from '@/entities/illness';
 
 export const doctorsStorage: PrimitiveAtom<Array<Doctor>> = atom(
-  mocks.getDoctors(),
+  mocks.getDoctors(20)
 ); // TODO Убрать моки
 
-export const doctors: Array<Illness> = atom((get) => {
+export const doctors = atom((get) => {
   get(doctorsStorage); // Должен быть readonly
 });
+
+//VLAD А разве нам не достаточно вместо useAtom просто использовать useAtomValue для readonly?

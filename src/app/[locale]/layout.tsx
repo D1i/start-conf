@@ -3,6 +3,10 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import i18nConfig from '@/i18nConfig';
 import { notFound } from 'next/navigation';
+import { JotaiProvider } from '@/providers';
+import Grid from '@mui/material/Grid';
+
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -39,7 +43,7 @@ export default async function RootLayout(
   return (
     <html lang={locale}>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
       </body>
     </html>
   );

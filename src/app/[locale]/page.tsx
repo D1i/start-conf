@@ -1,5 +1,6 @@
 import initTranslations from '@/app/i18n';
 import styles from './page.module.css';
+import Container from '@mui/material/Container';
 
 const i18nNamespaces = ['test'];
 
