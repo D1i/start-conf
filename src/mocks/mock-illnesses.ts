@@ -1,7 +1,7 @@
 import { IllnessType } from "@/entities/illnesses-types";
 import { Illness } from "@/entities/illness";
 
-const illnessDescriptions: Record<IllnessType, string> = {
+const illnessDescriptions: Partial<Record<IllnessType, string>> = {
   "Инфаркт миокарда":
     "Острое нарушение кровоснабжения сердечной мышцы, сопровождающееся болью в груди и одышкой.",
   Пневмония:
@@ -33,7 +33,7 @@ const illnessTypes = Object.keys(illnessDescriptions) as IllnessType[];
 export function generateMockIllness(): Illness {
   const type = illnessTypes[Math.floor(Math.random() * illnessTypes.length)];
   const description = illnessDescriptions[type];
-  return new Illness(type, description);
+  return new Illness(type, description ?? "");
 }
 
 /**

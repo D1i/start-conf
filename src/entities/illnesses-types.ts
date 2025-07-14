@@ -48,7 +48,9 @@ export type IllnessTypeRu =
   | "Ангина"
   | "Корь"
   | "Краснуха"
-  | "Ветряная оспа";
+  | "Ветряная оспа"
+  | "Бронхиальная астма"
+  | "Гепатит";
 
 export type IllnessTypeEn =
   | "flu"
