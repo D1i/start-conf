@@ -8,7 +8,8 @@ export const illnessesStorage: PrimitiveAtom<Array<Illness>> = atom(
   mocks.getIllnesses()
 ); // TODO Убрать моки
 
-export const illnesses = atom((get) => {
+//@ts-ignore
+export const illnesses: PrimitiveAtom<Array<Illness>> = atom((get, _set) => {
   get(illnessesStorage); // Должен быть readonly
 });
 

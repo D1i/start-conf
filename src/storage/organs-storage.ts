@@ -1,4 +1,14 @@
-import { atom } from 'jotai';
-import { mocks } from '@mocks';
+import { atom, PrimitiveAtom } from "jotai";
 
-export const organsStorage = atom(mocks.getOrgans(50));
+import { mocks } from "@mocks";
+
+import { Organ } from "@/entities/organ";
+
+export const organsStorage: PrimitiveAtom<Array<Organ>> = atom(
+  mocks.getOrgans(50),
+);
+
+//@ts-ignore
+export const organs: PrimitiveAtom<Array<Organ>> = atom((get, _set) => {
+  get(organsStorage); // Должен быть readonly
+});

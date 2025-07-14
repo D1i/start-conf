@@ -1,16 +1,18 @@
-// import {illnessesStorage} from "@/storage/illness-storage";
-// import {Illness} from "@/entities/illness";
-// import {createStore} from "jotai/vanilla/store";
+import { Illness } from "@/entities/illness";
+import { createStore } from "jotai";
 
-export const getIllnessesByOrgan = (/*illnesse*/) => {
+export const getIllnessesByOrgan = (illness: Array<Illness>) => {
   // const store = createStore();
-
-  // return (store.get(illnesse) as Array<Illness>).reduce((accumulator: Array<Illness> | [], illnessIterator: Illness) => {
-  //     if (illnessIterator.organs.includes(illnesse)) {
-  //         accumulator.push(illnessIterator.name);
-  //         return accumulator;
+  //
+  // return (store.get(illness) as Array<Illness>).reduce(
+  //   (accumulator: Array<Illness> | [], illnessIterator: Illness) => {
+  //     if (illnessIterator.organs.includes(illness)) {
+  //       accumulator.push(illnessIterator.name);
+  //       return accumulator;
   //     }
-  // }, [] as Array<Illness>);
+  //   },
+  //   [] as Array<Illness>,
+  // );
 
   return [];
 };
