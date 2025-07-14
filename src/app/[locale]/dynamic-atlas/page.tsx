@@ -24,42 +24,42 @@ export default function DynamicAtlas() {
   }, []);
 
   return (
-    <AuthorizedRouteContainer>
-      <div className={style.container}>
-        <div>
-          Left section
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            it's babylon container
-            <div className={style.organsContainer}>
-              {organsData.map((organ) => (
-                <Button
-                  key={organ.id + 'selector'}
-                  onClick={() => setCurrentSelectedOrgan(organ.id)}
-                >
-                  {organ.name}
-                </Button>
-              ))}
-            </div>
-            <div>Block with absolute position for switching layers</div>
+    // <AuthorizedRouteContainer>
+    <div className={style.container}>
+      <div>
+        Left section
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          it's babylon container
+          <div className={style.organsContainer}>
+            {organsData.map((organ) => (
+              <Button
+                key={organ.id + 'selector'}
+                onClick={() => setCurrentSelectedOrgan(organ.id)}
+              >
+                {organ.name}
+              </Button>
+            ))}
           </div>
-          <div
-            className={classname(style.infoContainer, {
-              [`${style.hidden}`]: isOpenInfoBlock,
-            })}
+          <div>Block with absolute position for switching layers</div>
+        </div>
+        <div
+          className={classname(style.infoContainer, {
+            [`${style.hidden}`]: isOpenInfoBlock,
+          })}
+        >
+          <div>
+            {organsData.find((organ) => organ.id === currentSelectedOrgan)
+              ?.description ?? 'organ not selected'}
+          </div>
+          <Button
+            onClick={handleToggleIsOpen}
+            className={style.openCloseToggler}
           >
-            <div>
-              {organsData.find((organ) => organ.id === currentSelectedOrgan)
-                ?.description ?? 'organ not selected'}
-            </div>
-            <Button
-              onClick={handleToggleIsOpen}
-              className={style.openCloseToggler}
-            >
-              OPEN/CLOSE
-            </Button>
-          </div>
+            OPEN/CLOSE
+          </Button>
         </div>
       </div>
-    </AuthorizedRouteContainer>
+    </div>
+    // </AuthorizedRouteContainer>
   );
 }
