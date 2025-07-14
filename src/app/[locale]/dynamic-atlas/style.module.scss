@@ -1,0 +1,32 @@
+@import "src/app/style-constants.module";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+
+  & > div {
+    height: 100vh;
+  }
+
+  & > .infoContainer {
+    @include block();
+
+    position: relative;
+    min-width: 150px;
+    width: 30%;
+    transition: transform 0.3s linear;
+
+    &.hidden {
+      transform: translateX(99%);
+    }
+
+    & > .openCloseToggler {
+      position: absolute;
+
+      left: -4.7rem;
+      top: 50%;
+
+      transform: rotate(90deg) translateY(-50%);
+    }
+  }
+}

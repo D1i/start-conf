@@ -5,11 +5,31 @@ $color-text: #ffffff; // белый текст
 $color-border: #495057; // серая рамка
 $color-hover: #2c3e50; // для hover-эффектов
 $color-accent: #748cab; // акцентный светло-синий
+$bg-surface: #1b263b;
+$color-text: #ffffff;
+$color-border: #495057;
 
-@mixin section($paddingY: 3rem) {
+@mixin section($paddingY: 0.5rem) {
   background-color: $color-bg;
   color: $color-text;
-  padding: $paddingY 2rem;
+  padding: $paddingY;
+}
+
+@mixin block(
+  $padding: 2rem,
+  $border-radius: 12px,
+  $border: 1px solid $color-border,
+  $shadow: 0 4px 12px rgba(0, 0, 0, 0.3)
+) {
+  background-color: $bg-surface;
+  color: $color-text;
+  padding: $padding;
+  border-radius: $border-radius;
+  border: $border;
+  box-shadow: $shadow;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 @mixin mui-card-wrapper($padding: 1rem, $radius: 12px) {

@@ -1,10 +1,10 @@
-import { OrganType } from "../entities/organ-types";
+import { OrganTypes } from "../entities/organ-types";
 import { Organ } from "../entities/organ";
 import { pickRandom } from "../utils";
 import { generateMockIllnessList } from "./mock-illnesses";
 import { v4 as uuid } from "uuid";
 
-export const organDescriptions: Record<OrganType, string> = {
+export const organDescriptions: Record<OrganTypes, string> = {
   Brain:
     "The central organ of the nervous system, responsible for thought, memory, and control of the body.",
   "Pituitary gland":
@@ -84,7 +84,7 @@ export const organDescriptions: Record<OrganType, string> = {
   "Muscular system": "Enables movement and maintains posture.",
 };
 
-const organTypes = Object.keys(organDescriptions) as OrganType[];
+const organTypes = Object.keys(organDescriptions) as OrganTypes[];
 
 export function generateMockOrgans(): Organ {
   const type = pickRandom(organTypes);
