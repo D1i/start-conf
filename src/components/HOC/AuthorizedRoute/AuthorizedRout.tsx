@@ -1,4 +1,8 @@
+'use client';
+
 import { UserPresenter } from '@/presenters';
+import { Button } from '@mui/material';
+import { redirect } from 'next/navigation';
 import { FC, ReactNode } from 'react';
 
 export const AuthorizedRout: FC<{
@@ -9,5 +13,14 @@ export const AuthorizedRout: FC<{
     return <>{children}</>;
   }
 
-  return <>Не авторизован</>;
+  const onClick = () => {
+    redirect('/login');
+  };
+
+  return (
+    <div>
+      <div>Вы не авторизованы</div>
+      <Button onClick={() => redirect('/login')}>Авторизоваться</Button>
+    </div>
+  );
 };
