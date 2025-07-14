@@ -1,0 +1,89 @@
+// _variables.scss
+$color-bg: #0d1b2a; // тёмно-синий фон
+$color-surface: #1b263b; // чуть светлее для карточек
+$color-text: #ffffff; // белый текст
+$color-border: #495057; // серая рамка
+$color-hover: #2c3e50; // для hover-эффектов
+$color-accent: #748cab; // акцентный светло-синий
+
+@mixin section($paddingY: 3rem) {
+  background-color: $color-bg;
+  color: $color-text;
+  padding: $paddingY 2rem;
+}
+
+@mixin mui-card-wrapper($padding: 1rem, $radius: 12px) {
+  background-color: $bg-surface;
+  color: $color-text;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  padding: $padding;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+@mixin mui-input-wrapper($radius: 6px) {
+  .MuiOutlinedInput-root {
+    background-color: darken($bg-surface, 3%);
+    border-radius: $radius;
+
+    input {
+      color: $color-text;
+    }
+
+    fieldset {
+      border-color: $color-border;
+    }
+
+    &:hover fieldset {
+      border-color: lighten($color-border, 10%);
+    }
+
+    &.Mui-focused fieldset {
+      border-color: $color-accent;
+      box-shadow: 0 0 0 2px rgba($color-accent, 0.25);
+    }
+  }
+
+  .MuiInputLabel-root {
+    color: $color-text;
+
+    &.Mui-focused {
+      color: $color-accent;
+    }
+  }
+}
+
+@mixin mui-button-wrapper {
+  .MuiButton-root {
+    background-color: $color-accent;
+    color: $color-text;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    text-transform: none;
+    font-weight: 600;
+
+    &:hover {
+      background-color: lighten($color-accent, 5%);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}
+
+@mixin nav-link {
+  color: $color-text;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $color-hover;
+  }
+
+  &.active {
+    border-bottom: 2px solid $color-accent;
+  }
+}

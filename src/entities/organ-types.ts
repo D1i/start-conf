@@ -136,4 +136,4 @@ export type OrganTypesEn =
   | "Skeletal system"
   | "Muscular system";
 
-export type OrganType = OrganTypesRu & OrganTypesEn;
+export type OrganTypes = OrganTypesRu & OrganTypesEn;

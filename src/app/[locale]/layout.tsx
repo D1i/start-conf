@@ -5,6 +5,8 @@ import "./globals.css";
 import i18nConfig from "@/i18nConfig";
 import { notFound } from "next/navigation";
 
+import mainThemeStyles from "./body.module.scss";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -39,7 +41,9 @@ export default async function RootLayout(
 
   return (
     <html lang={locale}>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${mainThemeStyles.main} ${geistSans.variable} ${geistMono.variable}`}
+      >
         {children}
       </body>
     </html>
