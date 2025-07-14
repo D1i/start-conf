@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState, ReactNode } from "react";
+import { useCallback, useState } from "react";
 import { useAtomValue, useAtom } from "jotai";
 import classname from "classnames";
 import Button from "@mui/material/Button";
@@ -26,16 +26,18 @@ export default function DynamicAtlas() {
     <div className={style.container}>
       <div>
         Left section
-        <div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
           it's babylon container
-          {organsData.map((organ) => (
-            <Button
-              key={organ.id + "selector"}
-              onClick={() => setCurrentSelectedOrgan(organ.id)}
-            >
-              {organ.name}
-            </Button>
-          ))}
+          <div className={style.organsContainer}>
+            {organsData.map((organ) => (
+              <Button
+                key={organ.id + "selector"}
+                onClick={() => setCurrentSelectedOrgan(organ.id)}
+              >
+                {organ.name}
+              </Button>
+            ))}
+          </div>
         </div>
         <div>Block with absolute position for switching layers</div>
       </div>
