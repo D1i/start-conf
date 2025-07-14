@@ -10,7 +10,7 @@ import { organsStorage } from '@/storage/organs-storage';
 import { selectedOrgan } from '@/storage/utilitar-storage';
 
 import style from './style.module.scss';
-import { AuthorizedRouteContainer } from '@/components/HOC';
+// import { AuthorizedRouteContainer } from '@/components/HOC';
 
 export default function DynamicAtlas() {
   const organsData = useAtomValue(organsStorage);
