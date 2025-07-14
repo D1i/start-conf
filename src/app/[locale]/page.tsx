@@ -1,15 +1,14 @@
 import initTranslations from '@/app/i18n';
 import styles from './page.module.css';
 import Container from '@mui/material/Container';
+import { redirect } from 'next/navigation';
 
 const i18nNamespaces = ['test'];
 
 export default async function Home(props: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await props.params;
+  redirect('/dynamic-atlas');
 
-  const { t } = await initTranslations(locale, i18nNamespaces);
-
-  return <div className={styles.page}>{t('hello')}</div>;
+  return <div className={styles.page}>dasdas</div>;
 }

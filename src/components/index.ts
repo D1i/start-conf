@@ -1,2 +1,6 @@
-export { DoctorsListContainer } from './features';
-export { OrgansListContainer } from './features';
+export {
+  DoctorsListContainer,
+  OrgansListContainer,
+  UserMenuContainer,
+} from './features';
+export { Header } from './blocks';
