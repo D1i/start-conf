@@ -1,0 +1,1 @@
+export { AuthorizedRouteContainer } from './AuthorizedRoute';

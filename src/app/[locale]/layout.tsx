@@ -1,11 +1,14 @@
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
+import i18nConfig from '@/i18nConfig';
+import { notFound } from 'next/navigation';
+import { JotaiProvider } from '@/providers';
+import Grid from '@mui/material/Grid';
 import { ReactNode } from "react";
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import i18nConfig from "@/i18nConfig";
-import { notFound } from "next/navigation";
-
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import mainThemeStyles from "./body.module.scss";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,10 +44,8 @@ export default async function RootLayout(
 
   return (
     <html lang={locale}>
-      <body
-        className={`${mainThemeStyles.main} ${geistSans.variable} ${geistMono.variable}`}
-      >
-        {children}
+      <body className={`${mainThemeStyles.main} ${geistSans.variable} ${geistMono.variable}`}>
+        <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
       </body>
     </html>
   );

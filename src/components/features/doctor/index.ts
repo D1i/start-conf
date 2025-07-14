@@ -1,0 +1,1 @@
+export { DoctorsListContainer } from './containers';
