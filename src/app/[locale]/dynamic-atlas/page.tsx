@@ -25,14 +25,15 @@ export default function DynamicAtlas() {
 
   return (
     <AuthorizedRouteContainer>
-      <div className={style.container}>
-        <div>
-          Left section
-          <div>
-            it's babylon container
+    <div className={style.container}>
+      <div>
+        Left section
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          it's babylon container
+          <div className={style.organsContainer}>
             {organsData.map((organ) => (
               <Button
-                key={organ.id + 'selector'}
+                key={organ.id + "selector"}
                 onClick={() => setCurrentSelectedOrgan(organ.id)}
               >
                 {organ.name}

@@ -2,9 +2,10 @@ import { IllnessType } from '@/entities/illnesses-types';
 import { Illness } from '@/entities/illness';
 import { pickRandom, pickRandomBySeed } from '@/utils';
 
-const illnessDescriptions: Record<string, string> = {
-  'Инфаркт миокарда':
-    'Острое нарушение кровоснабжения сердечной мышцы, сопровождающееся болью в груди и одышкой.',
+
+const illnessDescriptions: Partial<Record<IllnessType, string>> = {
+  "Инфаркт миокарда":
+    "Острое нарушение кровоснабжения сердечной мышцы, сопровождающееся болью в груди и одышкой.",
   Пневмония:
     'Воспаление легочной ткани, вызванное инфекцией, с лихорадкой и кашлем.',
   Гастрит:
@@ -34,7 +35,7 @@ const illnessTypes = Object.keys(illnessDescriptions) as IllnessType[];
 export function generateMockIllness(): Illness {
   const type = pickRandomBySeed(illnessTypes, 10);
   const description = illnessDescriptions[type];
-  return new Illness(type, description);
+  return new Illness(type, description ?? "");
 }
 
 /**
