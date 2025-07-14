@@ -1,2 +1,2 @@
-export { DoctorsListPresenter } from './features';
-export { OrgansListPresenter } from './features';
+export { DoctorsListContainer } from './features';
+export { OrgansListContainer } from './features';

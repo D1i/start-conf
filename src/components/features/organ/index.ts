@@ -1,1 +1,1 @@
-export { OrgansListPresenter } from './presenters';
+export { OrgansListContainer } from './containers';
