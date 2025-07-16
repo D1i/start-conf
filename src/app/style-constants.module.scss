@@ -9,6 +9,22 @@ $bg-surface: #1b263b;
 $color-text: #ffffff;
 $color-border: #495057;
 
+$blue: #00a3ff;
+$red: #f3525a;
+$gray: #d0d0e5cc;
+$pink: #fc54b0;
+$orange: #f5ad4f;
+$green: #d7f56e;
+
+$blue_background: rgba(0, 163, 255, 0.08);
+$red_background: rgba(243, 82, 90, 0.08);
+$gray_background: rgba(208, 208, 229, 0.08);
+$pink_background: rgba(252, 84, 176, 0.08);
+$orange_background: rgba(245, 173, 79, 0.08);
+$green_background: rgba(215, 245, 110, 0.08);
+
+$active_background_theme: rgba(31, 32, 34, 1);
+
 @mixin section($paddingY: 0.5rem) {
   background-color: $color-bg;
   color: $color-text;

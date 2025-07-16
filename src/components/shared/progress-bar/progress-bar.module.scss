@@ -1,0 +1,36 @@
+@import '../../../app/style-constants.module.scss';
+
+.container {
+  .title {
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  .progress {
+    margin-top: 4px;
+    height: 4px;
+    border-radius: 5px;
+    span {
+      border-radius: 5px;
+    }
+  }
+
+  .progressBottom {
+    margin-top: 4px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .description {
+      color: $gray;
+      opacity: 0.4;
+      font-size: 14px;
+      line-height: 150%;
+    }
+
+    .value {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+}

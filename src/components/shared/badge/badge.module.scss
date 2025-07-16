@@ -1,0 +1,50 @@
+@import '../../../app/style-constants.module.scss';
+
+.badge {
+  display: inline-block;
+  line-height: 150%;
+}
+
+.do {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.default {
+  border-radius: 20px;
+  padding: 0 5px 0 5px;
+  font-size: 12px;
+}
+
+.large {
+  border-radius: 24px;
+  padding: 0 6px 0 6px;
+  font-size: 14px;
+}
+
+.accent {
+  background-color: $blue;
+}
+
+.warn {
+  background-color: $red;
+}
+
+.secondary {
+  color: $blue;
+  background-color: $blue_background;
+}
+
+.do.secondary {
+  background-color: $blue;
+}
+
+.gray {
+  color: $gray;
+  background-color: $gray_background;
+}
+
+.do.gray {
+  background-color: $gray;
+}

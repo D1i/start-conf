@@ -1,0 +1,73 @@
+@import '../../../app/style-constants.module.scss';
+
+.label {
+  border-radius: 150px;
+  padding: 2px 8px 2px 8px;
+
+  .dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+  }
+
+  .text {
+    font-size: 12px;
+    line-height: 150%;
+    margin-left: 7px;
+  }
+
+  &.gray {
+    background-color: $gray_background;
+    color: $gray;
+
+    & .dot {
+      background-color: $gray;
+    }
+  }
+
+  &.red {
+    background-color: $red_background;
+    color: $red;
+
+    & .dot {
+      background-color: $red;
+    }
+  }
+
+  &.blue {
+    background-color: $blue_background;
+    color: $blue;
+
+    & .dot {
+      background-color: $blue;
+    }
+  }
+
+  &.pink {
+    background-color: $pink_background;
+    color: $pink;
+
+    & .dot {
+      background-color: $pink;
+    }
+  }
+
+  &.green {
+    background-color: $green_background;
+    color: $green;
+
+    & .dot {
+      background-color: $green;
+    }
+  }
+
+  &.orange {
+    background-color: $orange_background;
+    color: $orange;
+
+    & .dot {
+      background-color: $orange;
+    }
+  }
+}
