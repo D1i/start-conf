@@ -9,7 +9,7 @@ import {
   StyledTooltip,
   Switcher,
   Text,
-  ThreeStateCheckbox,
+  Check,
 } from '@/components';
 
 const i18nNamespaces = ['test'];
@@ -75,8 +75,7 @@ export default async function Home(props: {
       >
         <Text>Левый темный тултип</Text>
       </StyledTooltip>
-      //TODO Компонент в разработке
-      <ThreeStateCheckbox />
+      <Check />
     </div>
   );
 }

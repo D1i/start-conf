@@ -11,5 +11,5 @@ export {
   ProgressBar,
   Switcher,
   StyledTooltip,
-  ThreeStateCheckbox,
+  Check,
 } from './shared';

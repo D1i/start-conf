@@ -4,4 +4,4 @@ export { Label } from './label';
 export { ProgressBar } from './progress-bar';
 export { Switcher } from './switcher';
 export { StyledTooltip } from './styled-tooltip';
-export { ThreeStateCheckbox } from './three-state-checkbox';
+export { Check } from './check';
